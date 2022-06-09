@@ -17,7 +17,7 @@ function chartData() {
                 pointRadius: centroid.map(centroid => 10).concat(dataSet().map(dataPoint => 5.5)),
                 pointBackgroundColor: colors.slice(0,k),
                 showLine: false,
-                backgroundColor: 'aqua'
+                backgroundColor: 'black'
             }
         ] 
     }

@@ -10,23 +10,23 @@ let preventCallback = false
 document.addEventListener('keydown', async()=>{
     if(!preventCallback) {
         preventCallback = true
-        let centroidLocs = ['1']
-        let centroidNewLocs = ['2']
+        let centroidVal = ['1']
+        let centroidNewVal = ['2']
     
-        while(JSON.stringify(centroidLocs)!= (JSON.stringify(centroidNewLocs))) {
-            centroidLocs = []
+        while(JSON.stringify(centroidVal)!= (JSON.stringify(centroidNewVal))) {
+            centroidVal = []
             for(let i=0; i<k; i++) {
-                centroidLocs.push(chart.data.datasets[0].data[i])
+                centroidVal.push(chart.data.datasets[0].data[i])
             }
             await labelDataPoints()
             await recalculateCentroid()
     
-            centroidNewLocs = []
+            centroidNewVal = []
             for(let i=0; i<k; i++) {
-                centroidNewLocs.push(chart.data.datasets[0].data[i])
+                centroidNewVal.push(chart.data.datasets[0].data[i])
             }
         }
-        alert('Processo Concluído')
+        alert('Reajustes Concluídos, Verificar Console!')
         consoleResults()
     }
 })
@@ -56,7 +56,7 @@ function recalculateCentroid() {
         }
     })
 
-        chart.update(3000)
+        chart.update(1000)
         await new Promise(resolve => setTimeout(resolve, 3000))
         resolve()
     })

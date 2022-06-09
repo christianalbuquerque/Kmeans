@@ -26,7 +26,7 @@ document.addEventListener('keydown', async()=>{
                 centroidNewLocs.push(chart.data.datasets[0].data[i])
             }
         }
-        alert('Acabou, olha o console')
+        alert('Processo Concluído')
         consoleResults()
     }
 })

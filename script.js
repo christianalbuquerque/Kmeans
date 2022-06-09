@@ -10,8 +10,8 @@ let preventCallback = false
 document.addEventListener('keydown', async()=>{
     if(!preventCallback) {
         preventCallback = true
-        let centroidLocs = ['code']
-        let centroidNewLocs = ['tonight']
+        let centroidLocs = ['1']
+        let centroidNewLocs = ['2']
     
         while(JSON.stringify(centroidLocs)!= (JSON.stringify(centroidNewLocs))) {
             centroidLocs = []
